@@ -1,5 +1,5 @@
 #!groovy
 
-node('setup') {
+node {
   sh 'docker run --rm -v .:/app composer/composer install'
 }
