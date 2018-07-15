@@ -7,7 +7,7 @@ node {
     }
 
     stage('Build') {
-      sh 'docker run --rm -v .:/app composer/composer install'
+      sh 'sudo docker run --rm -v .:/app composer/composer install'
     }
 
     stage('Tests') {
