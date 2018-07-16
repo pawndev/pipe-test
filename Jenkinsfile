@@ -1,7 +1,7 @@
 #!groovy
 pipeline {
   agent none
-  node {
+  node('docker') {
     try {
       stage('Clone Repository') {
         checkout scm
