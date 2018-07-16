@@ -12,5 +12,3 @@ docker-compose up
 ```
 bin/phpunit
 ```
-
-# just for check 
