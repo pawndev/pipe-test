@@ -1,5 +1,6 @@
 #!groovy
 pipeline {
+  agent none
   node {
     try {
       stage('Clone Repository') {
