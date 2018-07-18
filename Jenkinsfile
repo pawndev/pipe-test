@@ -2,18 +2,19 @@
 pipeline {
   agent none
   stages {
-    stage('Clone Repository') {
-      checkout scm
+    stage('Which branch') {
+      sh 'git branch'
     }
+    //stage('Clone Repository') {
+      //checkout scm
+    //}
 
-    stage('Build') {
-      sh 'sudo docker run --rm -v .:/app composer/composer install'
-    }
+    //stage('Build') {
+      //sh 'sudo docker run --rm -v .:/app composer/composer install'
+    //}
 
-    stage('Tests') {
-      parallel 'Unit': {
-        sh 'bin/phpunit'
-      }
-    }
+    //stage('Tests') {
+      //sh 'bin/phpunit'
+    //}
   }
 }
