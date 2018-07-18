@@ -1,9 +1,11 @@
 #!groovy
 pipeline {
-  agent none
+  agent { docker { image 'php:7.1-jessie' } }
   stages {
     stage('Which branch') {
-      sh 'git branch'
+      steps {
+        sh 'git branch'
+      }
     }
     //stage('Clone Repository') {
       //checkout scm
