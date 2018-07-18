@@ -5,7 +5,6 @@ pipeline {
     try {
       stages {
         stage('Clone Repository') {
-          properties([pipelineTriggers([[$class: 'GitHubPushTrigger'], pollSCM('* * * * *')])])
           checkout scm
         }
 
