@@ -10,6 +10,7 @@ pipeline {
 
         stage('Build') {
           sh 'sudo docker run --rm -v .:/app composer/composer install'
+          sh 'echo Bouloui'
         }
 
         stage('Tests') {
