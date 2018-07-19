@@ -8,19 +8,25 @@ pipeline {
       //}
     //}
     stage('checkout') {
-      checkout scm
-      sh 'echo $BRANCH_NAME'
+      steps {
+        checkout scm
+        sh 'echo $BRANCH_NAME'
+      }
     }
     //stage('Clone Repository') {
       //checkout scm
     //}
 
     stage('Build') {
-      sh 'docker run --rm -v .:/app composer/composer install'
+      steps {
+        sh 'docker run --rm -v .:/app composer/composer install'
+      }
     }
 
     stage('Tests') {
-      sh 'bin/phpunit'
+      steps {
+        sh 'bin/phpunit'
+      }
     }
   }
 }
