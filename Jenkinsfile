@@ -7,7 +7,7 @@ pipeline {
         //sh 'git branch'
       //}
     //}
-    node {
+    stage('checkout') {
       checkout scm
       sh 'echo $BRANCH_NAME'
     }
