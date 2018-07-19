@@ -1,5 +1,5 @@
 #!groovy
-//pipeline {
+pipeline {
   agent { docker { image 'php:7.1-jessie' } }
   stages {
     stage('Which branch') {
@@ -19,4 +19,4 @@
       //sh 'bin/phpunit'
     //}
   }
-//}
+}
