@@ -21,5 +21,6 @@ class UserTest extends TestCase
 
         self::assertEquals($emailString, $user->email());
         self::assertNotNull($user->uuid());
+        self::assertEquals(1, 1);
     }
 }
