@@ -7,9 +7,13 @@ pipeline {
         //sh 'git branch'
       //}
     //}
-    stage('Clone Repository') {
+    node {
       checkout scm
+      sh 'echo $BRANCH_NAME'
     }
+    //stage('Clone Repository') {
+      //checkout scm
+    //}
 
     stage('Build') {
       sh 'docker run --rm -v .:/app composer/composer install'
