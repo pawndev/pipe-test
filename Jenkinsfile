@@ -1,6 +1,6 @@
 #!groovy
 pipeline {
-  agent { docker { image 'php:7.1-jessie' } }
+  agent { docker { image 'thomsch98/php7-composer:7.1.15-fpm-composer-alpine' } }
   stages {
     //stage('Which branch') {
       //steps {
