@@ -19,7 +19,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh '/usr/bin/docker run --rm -v .:/app composer/composer install'
+        sh 'docker run --rm -v .:/app composer/composer install'
       }
     }
 
